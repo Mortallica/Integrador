@@ -6,14 +6,14 @@ import statistics as stats
 app = Flask(__name__)
 CORS(app)
 
-tipo_medicion = {'sensor':'HC-SR04','variable': 'Distancia','unidades':'Centimetros'}
+tipo_medicion = {'sensor':'TSL2561','variable': 'Luz Solar','unidades':'Lux'}
 
 mediciones = [
  {'fecha': '2019-08-21 18:20:00', **tipo_medicion, 'valor': 300},
- {'fecha': '2019-08-21 20:13:01', **tipo_medicion, 'valor': 150},
- {'fecha': '2019-08-22 15:20:00', **tipo_medicion, 'valor': 60},
- {'fecha': '2019-08-22 18:20:00', **tipo_medicion, 'valor': 24},
- {'fecha': '2019-08-23 11:20:00', **tipo_medicion, 'valor': 15}
+ {'fecha': '2019-08-21 23:13:01', **tipo_medicion, 'valor': 3},
+ {'fecha': '2019-08-22 15:20:00', **tipo_medicion, 'valor': 500},
+ {'fecha': '2019-08-22 18:20:00', **tipo_medicion, 'valor': 600},
+ {'fecha': '2019-08-23 11:20:00', **tipo_medicion, 'valor': 1000}
 ]
 
 @app.route('/')
